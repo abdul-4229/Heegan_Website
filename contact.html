@@ -38,13 +38,13 @@
           <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="practice-areas.html" class="nav-link">Practice areas</a></li>
-      <div class="nav-item dropdown">
+      <!-- <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources and publications</a>
         <div class="dropdown-menu">
           <a href="case.html" class="dropdown-item">Case</a>
           <a href="blog.html" class="dropdown-item">Blog</a>
         </div>
-      </div>
+      </div> -->
       <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
       <li class="nav-item cta"><a href="booking.html" class="nav-link">Make Appointment</a></li>
     
@@ -89,20 +89,23 @@
         </div>
         <div class="row block-9 no-gutters">
           <div class="col-lg-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
+            <form action="https://formsubmit.co/0fddef6e7a600f8686239742f3847ee1" method="POST" class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea cols="30" rows="7" name="message" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://heeganlawfirm.dhaban.com/thanks">
+                <input type="hidden" name="_template" value="table">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
