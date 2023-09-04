@@ -37,13 +37,13 @@
 		  <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
 		  <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 		  <li class="nav-item"><a href="practice-areas.html" class="nav-link">Practice areas</a></li>
-		  <div class="nav-item dropdown">
+		  <!-- <div class="nav-item dropdown">
 			  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources and publications</a>
 			  <div class="dropdown-menu">
 				  <a href="case.html" class="dropdown-item">Case</a>
 				  <a href="blog.html" class="dropdown-item">Blog</a>
 				</div>
-			</div>
+			</div> -->
 			<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 			<li class="nav-item cta "><a href="booking.html" class="nav-link">Make Appointment</a></li>
 	</ul>
@@ -68,25 +68,36 @@
     	<div class="container">
     		<div class="row d-md-flex justify-content-end">
     			<div class="col-md-6 half p-3 py-5 pl-md-5 ftco-animate heading-section heading-section-white">
-    				<span class="subheading">Booking an Appointment</span>
-    				<h2 class="mb-4">Free Consultation</h2>
-    				<form action="#" class="consultation">
+    			<span class="subheading">Booking an Appointment</span>
+    			<h2 class="mb-4">Free Consultation</h2>
+    			<form class="consultation" name="product" id="product" method="post">
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Your Name">
+	              <input type="text" class="form-control" name="name" placeholder="Your Name">
 	            </div>
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Your Email">
+	              <input type="text" class="form-control" name="email" placeholder="Your Email">
 	            </div>
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Subject">
+	              <input type="text" class="form-control" name="subject" placeholder="Subject">
 	            </div>
 	            <div class="form-group">
-	              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+	              <textarea name="message"  cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 	            </div>
 	            <div class="form-group">
 	              <input type="submit" value="Send message" class="btn btn-dark py-3 px-4">
 	            </div>
 	          </form>
+			  <script>
+				const scriptURL = 'https://script.google.com/macros/s/AKfycbxrZbtd-oTwcxuckDLEWr2M___g60baOJXFIrB9ALUvw8pC3zn81Z7LKrBjhBYjRsr6/exec'
+				const form = document.forms['product']
+			  
+				form.addEventListener('submit', e => {
+				  e.preventDefault()
+				  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+					.then(response => console.log('Success!', response))
+					.catch(error => console.error('Error!', error.message))
+				})
+			  </script>
     			</div>
     		</div>
     	</div>
@@ -181,6 +192,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/language.js"></script>
-
+  
   </body>
 </html>
