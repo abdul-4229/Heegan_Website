@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/index.js"></script>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+<script type="text/javascript">
+      (function(){
+        emailjs.init("Rh8wtoBDjIscPvDfn");
+  })();
+</script>
   </head>
   <body>
     
@@ -89,24 +99,18 @@
         </div>
         <div class="row block-9 no-gutters">
           <div class="col-lg-6 order-md-last d-flex">
-            <form action="https://formsubmit.co/0fddef6e7a600f8686239742f3847ee1" method="POST" class="bg-light p-5 contact-form">
+            <form class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                <textarea cols="30" rows="7" id="message" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <textarea cols="30" rows="7" name="message" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://heeganlawfirm.dhaban.com/thanks">
-                <input type="hidden" name="_template" value="table">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" onclick="sendMail" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
             </div>
@@ -193,7 +197,6 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
